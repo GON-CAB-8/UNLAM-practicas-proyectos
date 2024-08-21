@@ -1,6 +1,3 @@
-[submodule "ProgramacionWebIII/Gestion_Competidores_Practica"]
-	path = ProgramacionWebIII/Gestion_Competidores_Practica
-	url = https://github.com/GON-CAB-8/Gestion_Competidores_Practica.git
 [submodule "ProgramacionWebI/TrabajoPracticoFinal"]
 	path = ProgramacionWebI/TrabajoPracticoFinal
 	url = https://github.com/GON-CAB-8/TP_PW1.git

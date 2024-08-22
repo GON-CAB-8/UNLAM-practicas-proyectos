@@ -1,0 +1,14 @@
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\bin\Debug\net6.0\GestionCompetidores.Entidades.deps.json
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\bin\Debug\net6.0\GestionCompetidores.Entidades.runtimeconfig.json
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\bin\Debug\net6.0\GestionCompetidores.Entidades.dll
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\bin\Debug\net6.0\GestionCompetidores.Entidades.pdb
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\obj\Debug\net6.0\GestionCompetidores.Entidades.csproj.AssemblyReference.cache
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\obj\Debug\net6.0\GestionCompetidores.Entidades.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\obj\Debug\net6.0\GestionCompetidores.Entidades.AssemblyInfoInputs.cache
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\obj\Debug\net6.0\GestionCompetidores.Entidades.AssemblyInfo.cs
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\obj\Debug\net6.0\GestionCompetidores.Entidades.csproj.CoreCompileInputs.cache
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\obj\Debug\net6.0\GestionCompetidores.Entidades.dll
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\obj\Debug\net6.0\refint\GestionCompetidores.Entidades.dll
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\obj\Debug\net6.0\GestionCompetidores.Entidades.pdb
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\obj\Debug\net6.0\GestionCompetidores.Entidades.genruntimeconfig.cache
+D:\Projects\.NET\ GestionCompetidores\ GestionCompetidores.Entidades\obj\Debug\net6.0\ref\GestionCompetidores.Entidades.dll

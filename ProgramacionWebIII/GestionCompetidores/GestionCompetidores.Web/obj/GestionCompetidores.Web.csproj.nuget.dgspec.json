@@ -1,0 +1,219 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Web\\GestionCompetidores.Web.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Entidades\\GestionCompetidores.Entidades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Entidades\\GestionCompetidores.Entidades.csproj",
+        "projectName": "GestionCompetidores.Entidades",
+        "projectPath": "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Entidades\\GestionCompetidores.Entidades.csproj",
+        "packagesPath": "C:\\Users\\cabra\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Entidades\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cabra\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.31, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.423\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Web\\GestionCompetidores.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Web\\GestionCompetidores.Web.csproj",
+        "projectName": "GestionCompetidores.Web",
+        "projectPath": "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Web\\GestionCompetidores.Web.csproj",
+        "packagesPath": "C:\\Users\\cabra\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cabra\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Entidades\\GestionCompetidores.Entidades.csproj": {
+                "projectPath": "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Entidades\\GestionCompetidores.Entidades.csproj"
+              },
+              "D:\\Projects\\.NET\\ GestionCompetidores\\GestionCompetidores.Logica\\GestionCompetidores.Logica.csproj": {
+                "projectPath": "D:\\Projects\\.NET\\ GestionCompetidores\\GestionCompetidores.Logica\\GestionCompetidores.Logica.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.423\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\.NET\\ GestionCompetidores\\GestionCompetidores.Logica\\GestionCompetidores.Logica.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\.NET\\ GestionCompetidores\\GestionCompetidores.Logica\\GestionCompetidores.Logica.csproj",
+        "projectName": "GestionCompetidores.Logica",
+        "projectPath": "D:\\Projects\\.NET\\ GestionCompetidores\\GestionCompetidores.Logica\\GestionCompetidores.Logica.csproj",
+        "packagesPath": "C:\\Users\\cabra\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\.NET\\ GestionCompetidores\\GestionCompetidores.Logica\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cabra\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Entidades\\GestionCompetidores.Entidades.csproj": {
+                "projectPath": "D:\\Projects\\.NET\\ GestionCompetidores\\ GestionCompetidores.Entidades\\GestionCompetidores.Entidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.423\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

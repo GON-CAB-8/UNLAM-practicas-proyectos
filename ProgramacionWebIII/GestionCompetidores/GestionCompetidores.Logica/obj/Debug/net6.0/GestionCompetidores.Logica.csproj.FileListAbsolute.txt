@@ -1,0 +1,15 @@
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\bin\Debug\net6.0\GestionCompetidores.Logica.deps.json
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\bin\Debug\net6.0\GestionCompetidores.Logica.dll
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\bin\Debug\net6.0\GestionCompetidores.Logica.pdb
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\bin\Debug\net6.0\GestionCompetidores.Entidades.dll
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\bin\Debug\net6.0\GestionCompetidores.Entidades.pdb
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\obj\Debug\net6.0\GestionCompetidores.Logica.csproj.AssemblyReference.cache
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\obj\Debug\net6.0\GestionCompetidores.Logica.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\obj\Debug\net6.0\GestionCompetidores.Logica.AssemblyInfoInputs.cache
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\obj\Debug\net6.0\GestionCompetidores.Logica.AssemblyInfo.cs
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\obj\Debug\net6.0\GestionCompetidores.Logica.csproj.CoreCompileInputs.cache
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\obj\Debug\net6.0\GestionCompetidores.Logica.csproj.CopyComplete
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\obj\Debug\net6.0\GestionCompetidores.Logica.dll
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\obj\Debug\net6.0\refint\GestionCompetidores.Logica.dll
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\obj\Debug\net6.0\GestionCompetidores.Logica.pdb
+D:\Projects\.NET\ GestionCompetidores\GestionCompetidores.Logica\obj\Debug\net6.0\ref\GestionCompetidores.Logica.dll

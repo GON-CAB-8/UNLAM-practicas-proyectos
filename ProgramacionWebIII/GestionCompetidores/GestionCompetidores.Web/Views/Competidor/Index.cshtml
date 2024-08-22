@@ -1,0 +1,51 @@
+@model List<GestionCompetidores.Entidades.EF.Competidor>
+@{
+    var deportes = (List<GestionCompetidores.Entidades.EF.Deporte>)ViewBag.Deportes;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Competidores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="my-4">Lista de Competidores</h1>
+
+    <form method="get">
+        <div class="form-group">
+            <label for="idDeporte">Deporte:</label>
+            <select id="idDeporte" name="idDeporte" class="form-control">
+                <option value="">Todos</option>
+                @foreach (var deporte in deportes)
+                {
+                    <option value="@deporte.IdDeporte">@deporte.NombreDeporte</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Filtrar</button>
+    </form>
+
+    <table class="table table-striped mt-4">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Deporte</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var competidor in Model)
+        {
+            <tr>
+                <td>@competidor.IdCompetidor</td>
+                <td>@competidor.NombreCompetidor</td>
+                <td>@competidor.IdDeporteNavigation.NombreDeporte</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

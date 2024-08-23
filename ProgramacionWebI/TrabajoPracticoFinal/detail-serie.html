@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/detail.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="icon" type="image/x-icon" href="./icon/favicon-32x32.png">
+    <script src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/detail.js"></script>
+    <title>CheFlix</title>
+</head>
+<body>
+    <header>
+        <nav class="menu-navegacion">
+            <a href="./main-page.html"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="./series.html"><i class="fa-solid fa-film"></i>Series</a>
+            <a href="./peliculas.html"><i class="fa-solid fa-film"></i>Peliculas</a>
+            <a href="./profile.html"><i class="fa-solid fa-address-card"></i>Perfil</a>
+            <a id="logout" href="./index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar Sesión</a>
+        </nav>
+    </header>
+    <main>
+        <section class="contenedor">
+            <div class="portada">
+                <img src="./img/marginal.jpg" alt="poster el marginal">
+                <a href="https://www.youtube.com/watch?v=mN7xQF3hO1M&ab_channel=TopSeriesyPel%C3%ADculas" target="_blank"><button class="boton">Comenzar</button></a>
+            </div>
+            <div class="detalle">
+                <h3 class="cat">Título:</h3>
+                <p>El marginal</p>
+                <br>
+                <div class="detalle-temporadas-caps">
+                    <div class="temporadas">
+                        <label for="temporada">Temporadas:</label>
+                        <select name="temporada" id="temporada">
+                            <option value="0">Seleccione Temporada</option>
+                            <option value="1">Temporada 1</option>
+                            <option value="2">Temporada 2</option>
+                            <option value="3">Temporada 3</option>
+                            <option value="4">Temporada 4</option>
+                            <option value="5">Temporada 5</option>
+                        </select>
+                    </div>
+                    <div class="capitulos">
+                        <label for="capitulos">Capitulos:</label>
+                        <select name="capitulo" id="capitulo">
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <h3 class="cat">Duración:</h3>
+                <p>55 minutos</p>
+                <br>
+                <h3 class="cat">Género:</h3>
+                <p>Drama, accion</p>
+                <br>
+                <h3 class="cat">Actores:</h3>
+                <p><a href="https://es.wikipedia.org/wiki/Juan_Minuj%C3%ADn">Juan Minujin</a>,<a href="https://es.wikipedia.org/wiki/Martina_Gusm%C3%A1n">Martina Gusmán</a>,<a href="https://es.wikipedia.org/wiki/Nicol%C3%A1s_Furtado">Nicolás Furtado</a></p>
+                <br>
+                <h3 class="cat">Sinopsis:</h3>
+                <p>Miguel Palacios es un policía que está preso en una cárcel perdida en medio de la nada. Un día, un juez le convoca para que le ayude a resolver el secuestro de su hija.</p>
+            </div>
+        </section>
+        <h3>Otras opciones para ver en familia</h3>
+        <aside class="contenedor-similares">
+            <article class="similares">
+                <div class="similar"><a href="./detail-serie2.html"><img src="./img/simuladores.jpg" alt="portada de los simuladores"></a></div>
+                <div class="similar"><a href="./detail-serie.html"><img src="./img/mujeres.jpg" alt="portada de mujeres asesinas"></a></div>
+                <div class="similar"><a href="./detail-serie2.html"><img src="./img/rebelde.jpg" alt="portada de rebelde way"></a></div>
+                <div class="similar"><a href="./detail-serie.html"><img src="./img/tumberos.jpg" alt="portada de tumberos"></a></div>
+                <div class="similar"><a href="./detail-serie2.html"><img src="./img/el-puntero.jpg" alt="portada del puntero"></a></div>
+                <div class="similar"><a href="./detail-serie.html"><img src="./img/apache.jpg" alt="portada de apache"></a></div>
+                <div class="similar"><a href="./detail-serie2.html"><img src="./img/historia-de-un-clan.jpg" alt="portada de historia de un clan"></a></div>
+                <div class="similar"><a href="./detail-serie.html"><img src="./img/la-fragilidad-de-los-cuerpos.jpg" alt="portada de la fragilidad de los cuerpos"></a></div>
+                <div class="similar"><a href="./detail-serie2.html"><img src="./img/hermanos-y-detectives.jpg" alt="portada de hermanos y detectives"></a></div>
+            </article>
+        </aside>
+    </main>
+    <footer>
+        <h4>&copy Todos los derechos reservados</h4>
+    </footer>
+</body>
+</html>

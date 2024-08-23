@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/usr-reg.css">
+    <link rel="icon" type="image/x-icon" href="./icon/favicon-32x32.png">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/user-reg.js"></script>
+    <title>CheFlix</title>
+</head>
+
+<body>
+    <header>
+        <h1>Registrarse</h1>
+    </header>
+    <main>
+        <article>
+            <section>
+                <form action="./index.html" method="get" id="form-registro">
+                    <div class="contenedor">
+                        <div class="col-1">
+                            <label for="nombre">Nombre:</label>
+                            <br>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                        </div>
+                        <div class="col-1">
+                            <label for="apellido">Apellido:</label>
+                            <br>
+                            <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                        </div>
+                        <div class="col-1">
+                            <label for="email">E-mail:</label>
+                            <br>
+                            <input type="text" id="email" name="email" placeholder="E-mail">
+                        </div>
+                        <div class="col-1">
+                            <label for="usrname">Usuario:</label>
+                            <br>
+                            <input type="text" name="usrname" id="usrname" placeholder="Usuario">
+                        </div>
+                        <div class="col-1">
+                            <label for="pass">Contraseña:</label>
+                            <br>
+                            <input type="password" name="pass" id="pass" placeholder="Ingrese Contraseña">
+                        </div>
+                        <div class="col-1">
+                            <label for="rpass">Repetir Contraseña:</label>
+                            <br>
+                            <input type="password" name="rpass" id="rpass" placeholder="Repita la Contraseña">
+                        </div>
+                        <h3 class="col-2">Métodos de Pago</h3>
+                        <div class="col-2">
+                            <input type="radio" name="metodo" id="credito">
+                            <label for="credito">Tarjeta de Crédito</label>
+                            <br>
+                            <input type="text" name="nrotarjeta" id="nrotarjeta" placeholder="Numero de Tarjeta"
+                            maxlength="19" minlength="16">
+                            <input type="text" name="nrocvv" id="nrocvv" placeholder="XXX" maxlength="3" minlength="3">
+                        </div>
+                        <div class="col-2">
+                            <input type="radio" name="metodo" id="cupon">
+                            <label for="cupon">Cupón de Pago</label>
+                            <br>
+                            <input type="checkbox" name="pagof" id="pagof">
+                            <label for="pagof" class="label_excepcion">Pago Facil</label>
+                            <input type="checkbox" name="rapip" id="rapip">
+                            <label for="rapip" class="label_excepcion">RapiPago</label>
+                        </div>
+                        <div class="col-2">
+                            <input type="radio" name="metodo" id="transfer">
+                            <label for="transfer">Transferencia Bancaria</label>
+                            <p>CBU: 362514444595959337723</p>
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <a href="./index.html"><input type="submit" form="#form-registro" value="Confirmar" class="confirmar" id="btn_submit"></a>
+                        <a href="./index.html"><button class="cancelar">Cancelar</button></a>
+                    </div>
+                </form>
+                <div id="mensaje" class="error">
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

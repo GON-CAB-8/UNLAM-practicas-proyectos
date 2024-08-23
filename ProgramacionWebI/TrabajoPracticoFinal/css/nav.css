@@ -1,0 +1,29 @@
+.menu-navegacion{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.menu-navegacion a{
+    width: calc(20% - 0.1em);
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.menu-navegacion a:hover{
+    background-color: #ff8ba7;
+}
+
+.menu-navegacion i{
+    padding-left:1em;
+    padding-right:1em;
+}

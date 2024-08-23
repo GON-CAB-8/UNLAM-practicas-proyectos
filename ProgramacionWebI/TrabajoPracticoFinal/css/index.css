@@ -1,0 +1,83 @@
+body{
+    background-image: url(../img/index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    display: flex;
+}
+header h1{
+    margin: auto;
+    font-size: 400%;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+    color: #FFFFFF;
+}
+
+#mensaje{
+    text-align: center;
+}
+
+.sing-in{
+    background-color: rgba(128, 128, 128, 0.379);
+    margin: auto;
+    width: 18.75em;
+    text-align: center;
+    padding-top: 7px;
+    outline: solid thin;
+}
+
+.sing-in label{
+        display: inline-block;
+        width: 100px;
+        margin: 10px;
+}
+
+.sing-in a{
+    text-align: center;
+}
+
+article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 8em;
+}
+
+label input{
+    display: block;
+}
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: beige;
+    background-color: rgba(128, 128, 128, 0.500);
+    border-radius: 3px;
+}
+
+aside a{
+    padding: 2em;
+}
+
+.btn{
+    width: 160px;
+    height: 50px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.689);
+}
+
+.error{
+    color: crimson;
+}
+
+#iniciar-sesion{
+    width: 50%;
+}

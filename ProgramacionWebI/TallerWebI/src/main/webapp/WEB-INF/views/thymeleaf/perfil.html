@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Mi Perfil</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Use Thymeleaf expressions for CSS URLs -->
+    <link th:href="@{/plugins/nerd-fonts/css/nerd-fonts.css}" rel="stylesheet">
+    <link th:href="@{/plugins/bootstrap/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/plugins/bootstrap/bootstrap-slider.css}" rel="stylesheet">
+    <link th:href="@{/plugins/slick/slick.css}" rel="stylesheet">
+    <link th:href="@{/plugins/slick/slick-theme.css}" rel="stylesheet">
+    <link th:href="@{/plugins/jquery-nice-select/css/nice-select.css}" rel="stylesheet">
+
+    <!-- Use Thymeleaf expressions for JavaScript URLs -->
+    <script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+    <script th:src="@{/plugins/bootstrap/popper.min.js}"></script>
+    <script th:src="@{/plugins/bootstrap/bootstrap.min.js}"></script>
+    <script th:src="@{/plugins/bootstrap/bootstrap-slider.js}"></script>
+    <script th:src="@{/plugins/tether/js/tether.min.js}"></script>
+    <script th:src="@{/plugins/raty/jquery.raty-fa.js}"></script>
+    <script th:src="@{/plugins/slick/slick.min.js}"></script>
+    <script th:src="@{/plugins/jquery-nice-select/js/jquery.nice-select.min.js}"></script>
+    <script th:src="@{/plugins/google-map/map.js}" defer></script>
+    <script src="https://kit.fontawesome.com/90ab493dae.js" crossorigin="anonymous"></script>
+    <link href="https://www.nerdfonts.com/assets/css/webfont.css" rel="stylesheet">
+
+    <!-- Use Thymeleaf expressions for your custom CSS and JavaScript -->
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <script th:src="@{/js/script.js}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link th:href="@{/css/perfil.css}" rel="stylesheet">
+    <link th:href="@{/css/viaje.css}" rel="stylesheet">
+    <link th:href="@{/css/modal.css}" rel="stylesheet">
+    <link th:href="@{/css/comentarios.css}" rel="stylesheet">
+
+
+</head>
+
+<body class="body-wrapper">
+
+<header>
+
+    <div th:if="${session != null ? session.isLogged : false}">
+        <!-- Fragmento de barra de navegación para usuarios autenticados -->
+        <div th:replace="navbar-user"></div>
+    </div>
+    <div th:unless="${session != null ? session.isLogged : false}">
+        <!-- Fragmento de barra de navegación para invitados -->
+        <div th:replace="navbar-guest"></div>
+    </div>
+
+
+</header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body" th:if="${usuario != null}">
+                        <div class="d-flex justify-content-center align-items-center text-center">
+                            <img  th:src="@{'/usuario/imagen/' + ${usuario.id}}" class="img-thumbnail" alt="profile-image" style="max-width: 25% !important;">
+                            <div class="w-100 ms-3">
+                                <h3 th:text="${usuario.nombre + ' ' + usuario.apellido}" class="my-0 pb-2"></h3>
+                                <h5 class="text-muted pb-2" th:text="${usuario.email}"></h5>
+                                <h6 class="text-muted mb-1 font-12 pb-2"><strong>Ubicación:</strong> <span class="ms-2">Argentina</span></h6>
+                                <div class="row">
+                                    <div class="col-4 border-end border-light">
+                                        <h5 class="text-muted mt-1 mb-2 fw-normal">Viajes creados</h5>
+                                        <h2 class="mb-0 fw-semibold" th:text="${cantidadViajesCreados}"></h2>
+                                    </div>
+                                    <div class="col-4 border-end border-light">
+                                        <h5 class="text-muted mt-1 mb-2 fw-normal">Viajes a los que se unió</h5>
+                                        <h2 class="mb-0 fw-semibold" th:text="${cantidadViajesUnidos}"></h2>
+                                    </div>
+                                    <div class="col-4 border-end border-light">
+                                        <h5 class="text-muted mt-1 mb-2 fw-normal">Calificación</h5>
+                                        <h2 class="mb-0 fw-semibold" th:text="${calificacionPromedio.intValue()}"></h2>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-xl-12">
+            <div  class="card" >
+                <div class="card-body">
+                    <div class="card-header" th:if="${usuario != null}">
+                        <h2 class="header-title mb-3 text-center" th:text="'Viajes creados por: ' + ${usuario.nombre}"></h2>
+                    </div>
+                    <div class="border border-light p-2 mb-3" th:if="${viajesCreados != null && viajesCreados.size() > 0}">
+                        <div th:each="viaje : ${viajesCreados}">
+                            <div class="card card-margin flex-row align-items-center">
+                                <div class="flex-row userInfo text-center" style="padding: 1rem !important">
+                                    <div class="flex-row">
+                                        <img th:src="@{'/usuario/imagen/' + ${usuario.getId()}}" alt="avatar"
+                                             class="rounded-circle img-avatar-size topSpace"
+                                             style="max-width: 65% !important">
+                                        <h4 th:text="${viaje.usuario.nombre + ' ' + viaje.usuario.apellido}"
+                                            class="card-title"></h4>
+                                        <a th:href="@{/ver-viaje(id=${viaje.id})}" class="btn btn-secondary bottomSpace btn-block">Ver viaje</a>
+                                        <a th:href="@{/crear-viaje(viaje = ${viaje.id})}" th:if="${stalker == null}" class="btn btn-primary bottomSpace btn-block">Modificar viaje</a>
+                                        <button th:if="${session.usuario} eq ${viaje.usuario}" th:attr="onclick='openModal(\'' + ${viaje.id} + '\')'" class="btn btn-info bottomSpace btn-block">Registrar gasto</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 d-block">
+                                    <div class="card-header no-border">
+                                        <div class="col-lg-5 card-body topSpace">
+                                            <div class="widget-49-title-wrapper">
+                                                <div class="widget-49-meeting-time">
+                                                    <div class="widget-49-date-warning">
+                                                        <span class="widget-49-pro-title dateInfo">Origen: </span>
+                                                        <span class="widget-49-pro-title"
+                                                              th:text="${viaje.origen.provincia.nombre} + ', ' + ${viaje.origen.nombre}"></span>
+                                                    </div>
+                                                    <div class="widget-49-date-warning">
+                                                        <span class="widget-49-pro-title dateInfo">Destino: </span>
+                                                        <span class="widget-49-pro-title"
+                                                              th:text="${viaje.destino.provincia.nombre} + ', ' + ${viaje.destino.nombre}"></span>
+                                                    </div>
+                                                    <div class="widget-49-date-warning">
+                                                        <span class="widget-49-pro-title dateInfo">Fecha de salida: </span>
+                                                        <span class="widget-49-pro-title"
+                                                              th:text="${viaje.fecha}"></span>
+                                                    </div>
+                                                    <div class="widget-49-date-warning">
+                                                        <span class="widget-49-pro-title dateInfo">Condiciones:</span>
+                                                        <li class="list-group-item" style="font-size: 1.5em !important;">
+                                                        <span th:if="${viaje.noFumar}">
+                                                            <!-- Mostrar el icono de NO permitido fumar si noFumar es true -->
+                                                            <i class="nf nf-md-smoking"></i>
+                                                        </span>
+                                                            <span th:unless="${viaje.noFumar}">
+                                                            <!-- Mostrar el icono de permitido fumar si noFumar es false -->
+                                                            <i class="nf nf-md-smoking_off"></i>
+                                                        </span>
+                                                            <span th:if="${viaje.noNinios}">
+                                                            <!-- Mostrar el icono de NO permitido niños si noNinios es true -->
+                                                            <i class="nf nf-md-baby_carriage"></i>
+                                                        </span>
+                                                            <span th:unless="${viaje.noNinios}">
+                                                            <!-- Mostrar el icono de permitido niños si noNinios es false -->
+                                                            <i class="nf nf-md-baby_carriage_off"></i>
+                                                        </span>
+                                                            <span th:unless="${viaje.noMascotas}">
+                                                            <!-- Mostrar el icono de permitido mascotas si noMascotas es false -->
+                                                            <i class="nf nf-md-paw_off"></i>
+                                                        </span>
+                                                            <span th:if="${viaje.noMascotas}">
+                                                            <!-- Mostrar el icono de mascotas tachado si noMascotas es true -->
+                                                            <i class="nf nf-md-paw"></i>
+                                                        </span>
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 card-body topSpace">
+                                            <div class="widget-49-title-wrapper">
+                                                <div class="widget-49-meeting-time">
+                                                    <div class="widget-49-date-warning">
+                                                        <span class="widget-49-pro-title dateInfo">Cupo del viaje: </span>
+                                                        <span class="widget-49-pro-title" th:text="${viaje.cantidad}"></span>
+                                                    </div>
+                                                    <div class="widget-49-date-warning">
+                                                        <span class="widget-49-pro-title dateInfo">Lugares disponibles: </span>
+                                                        <span class="widget-49-pro-title" th:text="${viaje.cantidad - viaje.getListaPasajeros().size()}"></span>
+                                                    </div>
+                                                    <div class="widget-49-date-warning">
+                                                        <div class="flex-row">
+                                                            <span class="widget-49-pro-title dateInfo">Descripción del viaje: </span>
+                                                            <span class="widget-49-pro-title"
+                                                                  th:text="${viaje.descripcion}"></span>
+                                                        </div>
+                                                    </div>
+                                                    
+
+
+                                                    <div th:attr="id='myModal-' + ${viaje.id}" class="modal" >
+                                                        <div class="modal-content">
+                                                            <span class="close" onclick="closeModal()">&times;</span>
+                                                            <p class="text-center mt-5 " style="font-size: 30px;margin-top: 2rem;text-align: center;font-weight: 900;">Nuevo Gasto</p>
+                                                            <form class="p-3" action="#" th:action="@{/agregar-gasto}" th:object="${gasto}" method="POST">
+                                                                <div class="form-group">
+                                                                    <input type="hidden" id="idViaje" name="idViaje" th:value="${viaje.id}">
+                                                                    <label for="descripcion" class="mb-3"><strong>Detalle del Gasto:</strong></label>
+                                                                    <input type="text" class="form-control bg-gray mb-3" id="descripcion" name="descripcion" th:field="*{descripcion}"></input>
+
+                                                                    <label for="monto" class="mb-3"><strong>Monto del Gasto:</strong></label>
+                                                                    <input type="number" class="form-control bg-gray mb-3" id="monto" name="monto" th:field="*{monto}"></input>
+
+                                                                    <div class="justify-content-center text-center">
+                                                                        <p th:if="${error != null}" class="alert alert-danger m-0" th:text="${error}"></p>
+                                                                        <p th:if="${exito!= null}" class="alert alert-danger m-0" th:text="${exito}">  </p>
+                                                                    </div>
+                                                                    <div class="justify-content-center text-center ">
+                                                                        <button class="p-3 btn btn-primary mt-2" type="submit">Agregar Gasto</button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div th:unless="${viajesCreados != null && viajesCreados.size() > 0}">
+                        <div style="display: flex; flex-direction: column;" class="text-center topSpace">
+                            <i class="fa-solid fa-exclamation-triangle mt-3 topSpace" style="font-size: 1.5em;"></i>
+                            <h4>¡No se encontraron viajes!</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="header-title pt-2">Comentarios de los usuarios</h2>
+                </div>
+                <div class="card-body">
+                    <div class="border border-light p-2 mb-3">
+                        <div th:each="comentario : ${comentarios}">
+                            <div class="d-flex flex-row card post-user-comment-box">
+                                <img class="me-2 avatar-lg rounded-circle" th:src="@{'/usuario/imagen/' + ${comentario.usuarioOrigen.id}}" alt="Generic placeholder image">
+                                <div class="w-100">
+                                    <h5 class th:text="'Usuario que dejó el comentario: ' + ${comentario.usuarioOrigen.nombre}"></h5>
+                                    <h6 th:text="'Puntaje: ' + ${comentario.calificacion.intValue()}+'/5'"></h6>
+                                    <h6 class th:text="'Comentario: ' + ${comentario.descripcion}"></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div th:unless="${comentarios != null && comentarios.size() > 0}">
+                            <div style="display: flex; flex-direction: column;" class="text-center topSpace">
+                                <i class="fa-solid fa-exclamation-triangle mt-3 topSpace" style="font-size: 1.5em;"></i>
+                                <h4>¡Aún no hay comentarios para éste usuario!</h4>
+                            </div>
+                        </div>
+
+
+                        <div class="container col-md-6 card" th:if="${session.isLogged == true and usuario.id != session.usuario.id}" >
+                            <form id="commentForm" th:action="@{/comentario}" th:object="${comentario}" method="POST">
+                                <div class="card-header">
+                                    <h5 class="header-title pt-2">Dejar un comentario</h5>
+                                </div>
+                                    <div class="form-group col-md-12 mx-auto">
+                                        <div class="column">
+                                            <div class="rating-container pt-2">
+                                                <label class="" for="numeric-rating">Puntaje: </label>
+                                                <select class="ignore form-control mb-1" id="numeric-rating" name="numeric-rating" th:if="${comentario != null}" th:field="${comentario.calificacion}">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                            <input type="hidden" id="idUsuario" name="idUsuario" th:value="${usuario.id}">
+
+                                            <label class="" for="comentario">Comentario: </label>
+                                            <textarea th:field="${comentario.descripcion}" class="form-control" id="comentario" rows="3" required placeholder="Realiza un comentario"></textarea>
+                                            <button type="submit" class="btn btn-primary mt-4">Enviar comentario</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Agrega los scripts de Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6pB8aZ5lT+JQjG01jRM2Dx99+q8q5c5Z9bdi" crossorigin="anonymous"></script>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/popper.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/bootstrap/bootstrap-slider.js"></script>
+<script src="plugins/tether/js/tether.min.js"></script>
+<script src="plugins/raty/jquery.raty-fa.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeHh7_S2wkpYRu1DNMwzAZr5bcSd-cpY0&callback=initMap" async defer></script>
+<script th:src="@{/js/maps.js}"></script>
+<script th:src="@{js/script.js}"></script>
+<script th:src="@{/js/modal.js}"></script>
+
+

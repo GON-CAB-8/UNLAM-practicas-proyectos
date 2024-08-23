@@ -1,0 +1,3 @@
+[submodule "ProgramacionWebI/TallerWebI"]
+	path = ProgramacionWebI/TallerWebI
+	url = https://github.com/GON-CAB-8/TP_PW1.git
